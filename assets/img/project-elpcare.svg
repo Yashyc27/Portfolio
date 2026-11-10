@@ -1,0 +1,88 @@
+﻿<svg width="600" height="380" viewBox="0 0 600 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0" y1="0" x2="600" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141419"/>
+      <stop offset="100%" stop-color="#1C1826"/>
+    </linearGradient>
+    <linearGradient id="careGrad" x1="0" y1="0" x2="300" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF5F7E"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#FFDB6E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="380" rx="16" fill="url(#bgGrad5)"/>
+
+  <!-- Cross-Platform Architecture Display (Web + Android Mobile) -->
+  <g transform="translate(60, 40)">
+    <!-- Web Browser Frame (React) -->
+    <rect x="0" y="15" width="280" height="170" rx="10" fill="#20202A" stroke="#363646" stroke-width="1.5"/>
+    <rect x="0" y="15" width="280" height="28" rx="10" fill="#292936"/>
+    <circle cx="16" cy="29" r="4" fill="#FF5F56"/>
+    <circle cx="28" cy="29" r="4" fill="#FFBD2E"/>
+    <circle cx="40" cy="29" r="4" fill="#27C93F"/>
+    <text x="140" y="33" fill="#BBBBCC" font-family="'Poppins', sans-serif" font-size="9" text-anchor="middle">elpcare.health ┬╖ React SPA Web</text>
+
+    <!-- Web UI Content -->
+    <rect x="18" y="55" width="115" height="40" rx="6" fill="#2A2A38"/>
+    <text x="30" y="72" fill="#FF5F7E" font-family="'Poppins', sans-serif" font-size="8.5" font-weight="600">Γ¥ñ Heart Rate</text>
+    <text x="30" y="87" fill="#FFFFFF" font-family="'Poppins', sans-serif" font-size="12" font-weight="700">72 BPM ┬╖ Normal</text>
+
+    <rect x="145" y="55" width="115" height="40" rx="6" fill="#2A2A38"/>
+    <text x="157" y="72" fill="#4E82EE" font-family="'Poppins', sans-serif" font-size="8.5" font-weight="600">≡ƒôà Appointments</text>
+    <text x="157" y="87" fill="#FFFFFF" font-family="'Poppins', sans-serif" font-size="11" font-weight="600">Dr. Sharma ┬╖ 4 PM</text>
+
+    <!-- Hugging Face NLP Chat Box inside Web -->
+    <rect x="18" y="105" width="242" height="65" rx="6" fill="#262633" stroke="#A855F7" stroke-width="1"/>
+    <text x="28" y="122" fill="#FFDB6E" font-family="'Poppins', sans-serif" font-size="8.5" font-weight="600">≡ƒñù Hugging Face NLP Assistant</text>
+    <text x="28" y="137" fill="#CCCCCC" font-family="'Poppins', sans-serif" font-size="8.5">"Your cardiologist visit is confirmed for Tuesday."</text>
+    <text x="28" y="152" fill="#00E599" font-family="'Poppins', sans-serif" font-size="7.5">Zero Human Intervention ┬╖ Fully Automated</text>
+
+    <!-- Mobile Frame (Kotlin Android) -->
+    <g transform="translate(320, 0)">
+      <rect x="0" y="0" width="150" height="195" rx="16" fill="#1C1C26" stroke="#444458" stroke-width="2"/>
+      <rect x="45" y="6" width="60" height="4" rx="2" fill="#555566"/>
+      <!-- Mobile App Header -->
+      <rect x="8" y="18" width="134" height="26" rx="6" fill="#2D223B"/>
+      <text x="75" y="34" fill="#FFFFFF" font-family="'Poppins', sans-serif" font-size="9" font-weight="700" text-anchor="middle">ElpCare Android</text>
+
+      <rect x="15" y="52" width="120" height="35" rx="6" fill="#262635"/>
+      <text x="25" y="68" fill="#FFDB6E" font-family="'Poppins', sans-serif" font-size="8" font-weight="600">Elder Easy-Mode</text>
+      <text x="25" y="80" fill="#AAAAAA" font-family="'Poppins', sans-serif" font-size="7">High-contrast voice UI</text>
+
+      <rect x="15" y="95" width="120" height="40" rx="6" fill="#00D26A" fill-opacity="0.1" stroke="#00D26A" stroke-width="1"/>
+      <text x="75" y="112" fill="#00E599" font-family="'Poppins', sans-serif" font-size="8.5" font-weight="600" text-anchor="middle">Flask Microservices</text>
+      <text x="75" y="126" fill="#E0E0E0" font-family="'Poppins', sans-serif" font-size="9" font-weight="700" text-anchor="middle">-40% Latency</text>
+
+      <!-- Bottom home indicator -->
+      <line x1="50" y1="184" x2="100" y2="184" stroke="#888899" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Project Info Footer -->
+  <rect x="30" y="240" width="540" height="110" rx="12" fill="#1C1C21" stroke="#303038" stroke-width="1"/>
+  <text x="50" y="272" fill="#FFFFFF" font-family="'Poppins', sans-serif" font-size="17" font-weight="600">ElpCare ΓÇö Elder Healthcare Platform</text>
+  <text x="50" y="295" fill="#AAAAAA" font-family="'Poppins', sans-serif" font-size="12">Cross-platform React Web + Kotlin Android app with Hugging Face NLP booking &amp; 3-tier microservices</text>
+
+  <!-- Stack Pills -->
+  <g transform="translate(50, 312)">
+    <rect x="0" y="0" width="60" height="24" rx="12" fill="#2C2C35"/>
+    <text x="30" y="16" fill="#4E82EE" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">React</text>
+
+    <rect x="70" y="0" width="90" height="24" rx="12" fill="#2C2C35"/>
+    <text x="115" y="16" fill="#A855F7" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Kotlin Android</text>
+
+    <rect x="170" y="0" width="60" height="24" rx="12" fill="#2C2C35"/>
+    <text x="200" y="16" fill="#E0E0E0" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="500" text-anchor="middle">Flask</text>
+
+    <rect x="240" y="0" width="105" height="24" rx="12" fill="#2C2C35"/>
+    <text x="292" y="16" fill="#FFDB6E" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="500" text-anchor="middle">Hugging Face</text>
+
+    <rect x="355" y="0" width="95" height="24" rx="12" fill="#2C2C35"/>
+    <text x="402" y="16" fill="#E0E0E0" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="500" text-anchor="middle">Microservices</text>
+
+    <rect x="460" y="0" width="95" height="24" rx="12" fill="#2C2C35"/>
+    <text x="507" y="16" fill="#00E599" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">-40% Latency</text>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "space grotesk",
+        "createdAt": "2026-11-09T16:16:39.851Z",
+        "reason": "Project design system documented in DESIGN.md; font choice is intentional"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "projects/semantic-caching-rag/index.html"
+        ],
+        "createdAt": "2026-11-09T16:17:44.622Z",
+        "reason": "Agent confirmed each bordered section has at least 56px of top padding from .section and its mobile override; static scan does not resolve padding-block"
+      }
+    ]
+  }
+}

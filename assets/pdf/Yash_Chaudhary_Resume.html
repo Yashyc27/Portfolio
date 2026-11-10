@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Chaudhary — Resume | AI/ML & GenAI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #111827;
+      --accent: #7C3AED;
+      --text: #1F2937;
+      --muted: #4B5563;
+      --border: #E5E7EB;
+      --bg: #FFFFFF;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: #F3F4F6;
+      line-height: 1.5;
+      font-size: 13.5px;
+      padding: 30px 15px;
+    }
+    .print-bar {
+      max-width: 860px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111827;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+    }
+    .print-bar a, .print-bar button {
+      background: #7C3AED;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+    .print-bar a:hover, .print-bar button:hover {
+      background: #6D28D9;
+    }
+    .print-bar a.back {
+      background: transparent;
+      border: 1px solid #4B5563;
+      color: #E5E7EB;
+    }
+    .print-bar a.back:hover {
+      background: #1F2937;
+    }
+    .resume-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 45px 55px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-radius: 8px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .contact-info {
+      font-size: 12.5px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .contact-info a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-info a:hover {
+      color: var(--accent);
+    }
+    section {
+      margin-bottom: 18px;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    p.objective {
+      font-size: 13px;
+      color: var(--text);
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .item {
+      margin-bottom: 12px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 13.5px;
+    }
+    .item-sub {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 12.5px;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+    .tech-stack {
+      font-weight: 600;
+      color: #6D28D9;
+      font-size: 11.5px;
+      margin-bottom: 4px;
+    }
+    ul {
+      padding-left: 18px;
+    }
+    li {
+      margin-bottom: 4px;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+    .skills-block {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      row-gap: 6px;
+      font-size: 12.5px;
+    }
+    .skills-cat {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      font-size: 12px;
+    }
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted var(--border);
+      padding-bottom: 4px;
+    }
+    .cert-name {
+      font-weight: 500;
+    }
+    .cert-date {
+      color: var(--muted);
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .print-bar {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <span>Yash Chaudhary — Curriculum Vitae</span>
+    <div style="display: flex; gap: 10px;">
+      <a href="../../index.html" class="back">← Back to Portfolio</a>
+      <button onclick="window.print()">Print / Save as PDF</button>
+    </div>
+  </div>
+
+  <div class="resume-container">
+    <header>
+      <h1>YASH CHAUDHARY</h1>
+      <div class="contact-info">
+        <span>+91 7387389187</span>
+        <span>·</span>
+        <a href="mailto:ychaudhary161@gmail.com">ychaudhary161@gmail.com</a>
+        <span>·</span>
+        <a href="https://linkedin.com/in/yash-chaudhary-791835239" target="_blank" rel="noopener noreferrer">linkedin.com/in/yash-chaudhary-791835239</a>
+        <span>·</span>
+        <a href="https://github.com/Yashyc27" target="_blank" rel="noopener noreferrer">github.com/Yashyc27</a>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Career Objective</h2>
+      <p class="objective">
+        Pursuing M.Tech in Computer Engineering at Dwarkadas J Sanghvi College of Engineering with a strong foundation built through a B.E. (CGPA 8.3) and 4 internships spanning ML, GenAI, and full-stack development. Having shipped 8 production-deployed AI systems — from RAG pipelines on Amazon Bedrock to real-time MLOps workflows — I am looking to deepen my research skills in AI/ML, contribute to meaningful projects, and grow within teams building serious, real-world technology.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>M.Tech in Computer Engineering</span>
+          <span>2026 – 2028</span>
+        </div>
+        <div class="item-sub">
+          <span>Dwarkadas J Sanghvi College of Engineering, Mumbai</span>
+          <span>Mumbai, India</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>B.E. in Computer Engineering — CGPA 8.3 / 10</span>
+          <span>2021 – 2025</span>
+        </div>
+        <div class="item-sub">
+          <span>St. John College of Engineering & Management, Palghar</span>
+          <span>Maharashtra, India</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-block">
+        <div class="skills-cat">Languages & ML:</div>
+        <div>Python, JavaScript, SQL, NoSQL, TensorFlow, PyTorch, Scikit-learn, XGBoost, Hugging Face, Pandas, NumPy</div>
+
+        <div class="skills-cat">GenAI & LLMs:</div>
+        <div>LLM integration, RAG, Amazon Bedrock, LangChain, prompt engineering, embeddings, vector databases, NLP, Gemini API</div>
+
+        <div class="skills-cat">MLOps & DevOps:</div>
+        <div>MLflow, Prefect, Optuna, CI/CD, Docker, Git, DVC, A/B testing, experiment tracking, model monitoring, Agile, Scrum</div>
+
+        <div class="skills-cat">Frameworks & APIs:</div>
+        <div>Flask, FastAPI, React, Next.js, Streamlit, Kotlin (Android), REST API, Microservices</div>
+
+        <div class="skills-cat">Cloud & Tools:</div>
+        <div>AWS EC2, Amazon Bedrock, GCP, Firebase, PostgreSQL, Tableau, Plotly, Linux, Jupyter, VS Code</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Data Science with GenAI Intern</span>
+          <span>Nov 2025 – Mar 2026</span>
+        </div>
+        <div class="item-sub">
+          <span>Innomatics Research Labs</span>
+          <span>Hyderabad, India (Hybrid)</span>
+        </div>
+        <ul>
+          <li>Built 3 GenAI systems end-to-end: Gemini API chatbot, YouTube-to-article pipeline, and enterprise RAG Q&A on Amazon Bedrock with full agentic AI capabilities.</li>
+          <li>Engineered MLOps workflow for live Flipkart sentiment: Prefect daily retraining + MLflow tracking + Optuna tuning — 100% reproducible with version-controlled model governance.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Artificial Intelligence & Machine Learning Intern</span>
+          <span>Jun 2025 – Jul 2025</span>
+        </div>
+        <div class="item-sub">
+          <span>Edunet Foundation (AICTE)</span>
+          <span>New Delhi, India</span>
+        </div>
+        <ul>
+          <li>Salary prediction app (Flask + Scikit-learn) cutting workload 70%; R² from 0.71 to 0.89 via recursive feature elimination and cross-validation; shipped via CI/CD in a 6-week agile sprint.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>AI/ML Virtual Intern</span>
+          <span>Jul 2024 – Sep 2024</span>
+        </div>
+        <div class="item-sub">
+          <span>Eduskills Foundation (AWS)</span>
+          <span>Virtual</span>
+        </div>
+        <ul>
+          <li>Benchmarked 4 regression models (XGBoost, Ridge, Lasso, Linear) — 18% RMSE reduction over baseline; automated preprocessing cutting prep time 60%; A/B tested for final production selection.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Machine Learning Intern</span>
+          <span>Dec 2023 – Jan 2024</span>
+        </div>
+        <div class="item-sub">
+          <span>TechnoHacks EduTech</span>
+          <span>Remote</span>
+        </div>
+        <ul>
+          <li>Wine classifier 88% accuracy (+5% vs. baseline) + diabetes predictor 85% F1; GridSearchCV 50+ combos cut training time 35%; all results validated with hypothesis testing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Projects & Independent Work</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Enterprise Knowledge Base Q&A System</span>
+        </div>
+        <div class="tech-stack">Amazon Bedrock · RAG · Knowledge Bases · Streamlit · AWS EC2 · IAM</div>
+        <ul>
+          <li>Production RAG platform on Amazon Bedrock replacing keyword search with semantic vector retrieval over private docs — citation-backed, hallucination-resistant answers grounded in proprietary data.</li>
+          <li>Streamlit frontend deployed on AWS EC2 with IAM role-based access control; handles natural language queries end-to-end with no manual tagging or keyword tuning required.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Financial Advisor AI Chatbot</span>
+        </div>
+        <div class="tech-stack">Gemini API · LangChain · RAG · FastAPI · AWS EC2 · CI/CD</div>
+        <ul>
+          <li>Production LLM financial advisor with multi-turn memory, LangChain RAG pipeline from curated sources, and prompt engineering to keep every response accurate and grounded.</li>
+          <li>Microservices FastAPI backend on AWS EC2 via CI/CD — publicly accessible, zero-downtime since launch, with clean separation across retrieval, generation, and API layers.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Yonex Sentiment MLOps Pipeline</span>
+        </div>
+        <div class="tech-stack">MLflow · Prefect · Optuna · FastAPI · AWS · DVC</div>
+        <ul>
+          <li>End-to-end MLOps pipeline across 8,500+ reviews — Prefect daily retraining, MLflow experiment logging, Optuna tuning, DVC version control; 100% reproducible in continuous production.</li>
+          <li>FastAPI REST endpoint on AWS serving model predictions; runs without manual intervention — built to professional ML platform standards.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Tree Detection & Health Monitoring System</span>
+        </div>
+        <div class="tech-stack">YOLOv7 · Deep Learning · Flask · REST API · Satellite Imagery</div>
+        <ul>
+          <li>YOLOv7 on multispectral satellite imagery — 93% mAP across 3 spectral bands, monitoring 10,000+ trees per run; Flask REST API reduced manual survey time by 80%.</li>
+          <li>Enabled real-time precision monitoring across large geographic areas without field visits; supports health-status flagging per tree using spectral index analysis.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>ElpCare — Elder Healthcare Platform</span>
+        </div>
+        <div class="tech-stack">Flask · React · Kotlin · REST API · NLP · HuggingFace</div>
+        <ul>
+          <li>Cross-platform healthcare app (React web + Kotlin Android) with Hugging Face NLP chatbot handling appointment booking end-to-end with zero human intervention.</li>
+          <li>3-tier microservices architecture (Flask API · React SPA · Kotlin) reduced latency 40% vs. original monolith; supports accessible UX designed specifically for elderly users.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-item">
+          <span class="cert-name">Agentic AI Certified Foundations Associate</span>
+          <span class="cert-date">Oracle · Nov 2026</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">AI Skills Passport</span>
+          <span class="cert-date">Microsoft EY · Oct 2026</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Data Science & Analytics</span>
+          <span class="cert-date">HP Life · Jul 2025</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">AI Fundamentals</span>
+          <span class="cert-date">IBM SkillsBuild · Jul 2025</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Prompt Engineering for Everyone</span>
+          <span class="cert-date">IBM · Aug 2024</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Machine Learning Onramp</span>
+          <span class="cert-date">MATLAB · Jan 2024</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Data Science with Python</span>
+          <span class="cert-date">Simplilearn · Aug 2022</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Python · Game Dev with PyGame</span>
+          <span class="cert-date">GUVI · Jul 2022</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

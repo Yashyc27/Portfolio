@@ -1,0 +1,107 @@
+/* Portfolio design tokens: primitive -> semantic -> component. */
+:root {
+  color-scheme: dark;
+
+  /* Primitive palette */
+  --primitive-charcoal-950: #090b12;
+  --primitive-charcoal-900: #10131c;
+  --primitive-charcoal-800: #171b27;
+  --primitive-charcoal-700: #202637;
+  --primitive-charcoal-600: #30394d;
+  --primitive-blue-400: #8db7ff;
+  --primitive-blue-500: #6ea4ff;
+  --primitive-blue-600: #4d83e7;
+  --primitive-violet-400: #c2adff;
+  --primitive-violet-500: #a58aff;
+  --primitive-violet-600: #8265dc;
+  --primitive-white: #f4f6fb;
+  --primitive-slate-300: #c0c8d8;
+  --primitive-slate-400: #9ba6ba;
+  --primitive-slate-500: #78849a;
+  --primitive-green-400: #7cdbb7;
+  --primitive-red-400: #ff9ba9;
+
+  /* Semantic palette */
+  --color-bg: var(--primitive-charcoal-950);
+  --color-surface: var(--primitive-charcoal-900);
+  --color-surface-raised: var(--primitive-charcoal-800);
+  --color-surface-hover: var(--primitive-charcoal-700);
+  --color-border: #303748;
+  --color-border-strong: #46516a;
+  --color-text: var(--primitive-white);
+  --color-text-secondary: var(--primitive-slate-300);
+  --color-text-muted: var(--primitive-slate-400);
+  --color-text-quiet: var(--primitive-slate-500);
+  --color-primary: var(--primitive-blue-500);
+  --color-primary-hover: var(--primitive-blue-400);
+  --color-secondary: var(--primitive-violet-500);
+  --color-secondary-hover: var(--primitive-violet-400);
+  --color-positive: var(--primitive-green-400);
+  --color-danger: var(--primitive-red-400);
+  --color-focus: var(--primitive-blue-400);
+
+  /* Component tokens */
+  --button-primary-bg: var(--color-primary);
+  --button-primary-fg: #08101e;
+  --button-primary-hover-bg: var(--color-primary-hover);
+  --button-secondary-fg: var(--color-text-secondary);
+  --button-secondary-border: var(--color-border-strong);
+  --card-bg: var(--color-surface);
+  --card-border: var(--color-border);
+  --card-radius: 14px;
+  --card-padding: clamp(20px, 3vw, 32px);
+  --nav-bg: rgb(9 11 18 / 92%);
+  --nav-border: rgb(48 55 72 / 82%);
+
+  /* Type: Space Grotesk for editorial display and body; IBM Plex Mono for code/data. */
+  --font-sans: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', Consolas, monospace;
+  --type-xs: 0.75rem;
+  --type-sm: 0.875rem;
+  --type-body: 1rem;
+  --type-lead: clamp(1.0625rem, 1.7vw, 1.2rem);
+  --type-h3: clamp(1.25rem, 2.4vw, 1.8125rem);
+  --type-h2: clamp(2.5rem, 6.7vw, 5.125rem);
+  --type-display: clamp(3.25rem, 8.4vw, 6rem);
+  --leading-body: 1.65;
+  --leading-heading: 1;
+
+  /* Rhythm, layout, shape, and motion */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-section: clamp(4.75rem, 10vw, 8.5rem);
+  --container-max: 72.5rem;
+  --container-gutter: clamp(1.25rem, 5.4vw, 5.5rem);
+  --radius-control: 5px;
+  --radius-card: 14px;
+  --radius-pill: 999px;
+  --motion-fast: 160ms;
+  --motion-standard: 220ms;
+  --motion-enter: 700ms;
+  --ease-standard: cubic-bezier(.2, .75, .25, 1);
+
+  /* Existing site aliases kept during migration to the token API. */
+  --ink: var(--color-bg);
+  --surface: var(--color-surface);
+  --surface-raised: var(--color-surface-raised);
+  --line: var(--color-border);
+  --text: var(--color-text);
+  --muted: var(--color-text-muted);
+  --quiet: var(--color-text-quiet);
+  --accent: var(--color-primary);
+  --accent-ink: var(--button-primary-fg);
+  --warm: var(--color-secondary);
+  --sans: var(--font-sans);
+  --mono: var(--font-mono);
+  --wrap: var(--container-max);
+  --gutter: var(--container-gutter);
+  --radius: var(--radius-card);
+  --ease: var(--ease-standard);
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yashyc27.github.io/yash-portfolio/sitemap.xml

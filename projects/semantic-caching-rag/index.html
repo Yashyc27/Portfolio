@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-type="service">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A concept-stage research proposal on semantic caching and cost-aware model routing for retrieval-augmented generation.">
+  <meta name="theme-color" content="#090b12">
+  <meta name="page-type" content="service">
+  <meta name="site-kind" content="other">
+  <title>Semantic Caching and Cost-Aware Routing for RAG — Research Proposal</title>
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+
+  <link rel="canonical" href="https://yashyc27.github.io/yash-portfolio/projects/semantic-caching-rag/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Semantic Caching and Cost-Aware Routing for RAG — Research Proposal">
+  <meta property="og:description" content="A concept-stage research proposal on semantic caching and cost-aware model routing for retrieval-augmented generation.">
+  <meta property="og:url" content="https://yashyc27.github.io/yash-portfolio/projects/semantic-caching-rag/">
+  <meta property="og:image" content="https://yashyc27.github.io/yash-portfolio/assets/img/home-perfil.png">
+  <meta property="og:image:alt" content="Portrait of Yash Chaudhary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Semantic Caching and Cost-Aware Routing for RAG — Research Proposal">
+  <meta name="twitter:description" content="A concept-stage research proposal on semantic caching and cost-aware model routing for retrieval-augmented generation.">
+  <meta name="twitter:image" content="https://yashyc27.github.io/yash-portfolio/assets/img/home-perfil.png">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="../../index.html" aria-label="Yash Chaudhary home">YASH<span class="wordmark__dot">.</span><span class="wordmark__role">AI / ML ENGINEER</span></a>
+      <button class="nav-toggle" type="button" data-menu-button aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">Menu</button>
+      <nav class="site-nav" id="site-navigation" data-site-nav aria-label="Main navigation">
+        <a class="nav__link" href="../../index.html">Home</a><a class="nav__link" href="../../about/index.html">About</a><a class="nav__link" href="../index.html" aria-current="page">Projects</a><a class="nav__link" href="../../certifications/index.html">Certifications</a><a class="nav__link" href="../../resume/index.html">Resume</a><a class="button site-nav__cta" href="../../contact/index.html">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="research-case">
+    <section class="case-hero wrap" aria-labelledby="research-title">
+      <div class="research-case__hero-copy hero-enter"><span class="status-tag">Concept only · Proposal</span><h1 id="research-title">Semantic Caching and Cost-Aware Routing for RAG</h1><p class="case-hero__summary">A proposed study of cache reuse and query-aware model selection in retrieval-augmented generation, framed around the quality, cost, and latency trade-offs that an experiment would need to measure.</p></div>
+      <aside class="case-hero__aside"><p>RESEARCH CONCEPT<br>STATUS: NOT IMPLEMENTED<br>NO RESULTS REPORTED</p></aside>
+    </section>
+
+    <section class="wrap case-meta" aria-label="Concept status"><div class="case-meta__item"><div class="case-meta__label">Project stage</div><div class="case-meta__value">Concept only</div></div><div class="case-meta__item"><div class="case-meta__label">Implementation</div><div class="case-meta__value">No implementation details supplied</div></div><div class="case-meta__item"><div class="case-meta__label">Evaluation</div><div class="case-meta__value">No experiments or results supplied</div></div></section>
+
+    <section class="section wrap research-case__section" aria-labelledby="overview-title">
+      <div class="research-case__heading"><h2 id="overview-title">Overview</h2></div>
+      <div class="research-case__content"><p>This page presents a research concept, not a completed project. The proposed question is whether combining semantic reuse with cost-aware routing could reduce repeated work or unnecessary high-cost generation while preserving answer quality in a RAG system.</p><p>No code, system configuration, dataset, experiment, measured result, or research contribution has been provided for this concept.</p></div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="problem-title">
+      <div class="research-case__heading"><h2 id="problem-title">Problem &amp; motivation</h2></div>
+      <div class="research-case__content"><p>A RAG application typically retrieves context and asks a language model to produce an answer. Related user questions may require overlapping retrieval and generation work, while more capable model paths can carry different cost and response-time profiles.</p><p>The motivation for this concept is to investigate two possible decision points: whether a new query is close enough to a prior request for a safe cache reuse, and whether a cache miss needs a more capable generation path. Whether either mechanism provides a useful trade-off remains an open experimental question.</p></div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="approach-title">
+      <div class="research-case__heading"><h2 id="approach-title">Proposed approach</h2></div>
+      <div class="research-case__content"><ul class="research-case__list"><li><strong>Check for semantic reuse.</strong> Compare a query embedding with prior cached queries using a threshold that would need calibration and validation.</li><li><strong>Handle cache misses with RAG.</strong> Retrieve from a fixed corpus and form the grounded context for generation.</li><li><strong>Choose a model path.</strong> Explore a routing policy that selects from defined model tiers using retrieval or query signals, subject to a minimum answer-quality requirement.</li><li><strong>Preserve answer quality.</strong> Treat cache correctness, retrieval grounding, and answer quality as constraints to evaluate, not as outcomes already established.</li></ul>
+        <div class="research-architecture" role="img" aria-label="Proposed architecture, not implemented: query enters a semantic cache; a cache hit can return a reusable answer; a cache miss retrieves context, selects a model route, generates a grounded answer, and may store a validated response.">
+          <div class="research-architecture__title">PROPOSED ARCHITECTURE · NOT IMPLEMENTED</div>
+          <div class="research-architecture__row"><div class="research-node research-node--query">User query</div><span class="research-arrow" aria-hidden="true">→</span><div class="research-node research-node--cache">Semantic cache<br><small>similarity check</small></div></div>
+          <div class="research-architecture__branches"><div class="research-branch research-branch--hit"><span class="research-branch__label">CACHE HIT · PROPOSED</span><div class="research-node">Candidate cached answer</div><span class="research-arrow" aria-hidden="true">↓</span><div class="research-node">Return if validation policy permits</div></div><div class="research-branch research-branch--miss"><span class="research-branch__label">CACHE MISS · PROPOSED</span><div class="research-node">Retrieve relevant context</div><span class="research-arrow" aria-hidden="true">↓</span><div class="research-node">Cost-aware route selector</div><span class="research-arrow" aria-hidden="true">↓</span><div class="research-node">Model tier → grounded answer</div><span class="research-arrow" aria-hidden="true">↓</span><div class="research-node">Optional validated cache write</div></div></div>
+          <p class="research-architecture__note">Branch policy, threshold, model tiers, cache validation, and storage are design questions—not implemented decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="stack-title">
+      <div class="research-case__heading"><h2 id="stack-title">Technology stack</h2></div>
+      <div class="research-case__content"><p>No implementation stack has been selected or supplied. A repository, framework, embedding model, vector store, language-model provider, and deployment target remain to be determined.</p></div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="implementation-title">
+      <div class="research-case__heading"><h2 id="implementation-title">Implementation status</h2></div>
+      <div class="research-case__content"><p>This is a concept-only proposal. There is no implementation to describe, and no project-specific GitHub repository or live demo was supplied.</p></div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="method-title">
+      <div class="research-case__heading"><h2 id="method-title">Proposed experimental methodology</h2></div>
+      <div class="research-case__content"><p>A future evaluation could compare matched RAG configurations on the same query set, corpus, generation settings, and infrastructure:</p><ul class="research-case__list"><li>Baseline RAG without caching or model routing.</li><li>RAG with semantic caching only.</li><li>RAG with cost-aware routing only.</li><li>RAG with both mechanisms enabled.</li></ul><p>Before running the experiment, the dataset, answer-quality rubric, model choices, cache threshold, request mix, cost accounting, and repeated-run protocol would need to be specified. Results should include enough methodological detail for the comparisons to be reproduced.</p></div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="metrics-title">
+      <div class="research-case__heading"><h2 id="metrics-title">Candidate evaluation metrics</h2></div>
+      <div class="research-case__content"><ul class="research-metrics"><li><strong>Answer quality</strong><span>Groundedness and answer relevance, scored with a defined rubric.</span></li><li><strong>Retrieval quality</strong><span>Relevance of retrieved context against labeled or reviewed queries.</span></li><li><strong>Cost per query</strong><span>Measured provider and infrastructure cost under a stated accounting method.</span></li><li><strong>Response latency</strong><span>End-to-end median and tail latency under a repeatable request load.</span></li><li><strong>Cache behavior</strong><span>Hit rate, false reuse, and the effect of similarity thresholds on quality.</span></li></ul><p>These are proposed metrics only; no metric values have been measured.</p></div>
+    </section>
+
+    <section class="section wrap research-case__section research-results" aria-labelledby="results-title">
+      <div class="research-case__heading"><h2 id="results-title">Experimental results</h2></div>
+      <div class="research-case__content"><p class="research-results__empty">No experiments have been reported.</p><p>There are no actual benchmark results, measured performance metrics, or comparative findings to present at this concept stage.</p></div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="contribution-title">
+      <div class="research-case__heading"><h2 id="contribution-title">Research contribution</h2></div>
+      <div class="research-case__content"><p>No research contribution is established or claimed. A contribution could only be described after the system, method, and experimental evidence are available and reviewed.</p></div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="limits-title">
+      <div class="research-case__heading"><h2 id="limits-title">Limitations at this stage</h2></div>
+      <div class="research-case__content"><ul class="research-case__list"><li>No prototype, source repository, or chosen technology stack is available.</li><li>No dataset, corpus, baseline configuration, or cache policy has been specified.</li><li>No cost model, answer-quality rubric, or threshold-calibration protocol has been defined.</li><li>No experiments have been run, so effectiveness, safety, and quality trade-offs are unknown.</li></ul></div>
+    </section>
+
+    <section class="section wrap research-case__section" aria-labelledby="future-title">
+      <div class="research-case__heading"><h2 id="future-title">Future scope</h2></div>
+      <div class="research-case__content"><p>Potential next steps are to define a narrow research question, choose a reproducible dataset and baseline, implement cache and routing variants, set quality constraints before tuning, then publish the methodology and measured results—including cases where the approach does not help.</p><a class="text-link" href="../index.html">Back to all projects <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap site-footer__inner"><a class="wordmark" href="../../index.html" aria-label="Yash Chaudhary home">YASH<span class="wordmark__dot">.</span></a><span class="site-footer__note">AI / ML ENGINEERING · MUMBAI, INDIA</span><nav class="site-footer__links" aria-label="Footer navigation"><a href="../index.html">Projects</a><a href="../../resume/index.html">Resume</a><a href="../../contact/index.html">Contact</a><span>© <span data-year>2026</span></span></nav></div></footer>
+  <script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

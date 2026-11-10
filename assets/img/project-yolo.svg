@@ -1,0 +1,89 @@
+﻿<svg width="600" height="380" viewBox="0 0 600 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0" y1="0" x2="600" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#121614"/>
+      <stop offset="100%" stop-color="#1A241E"/>
+    </linearGradient>
+    <linearGradient id="yoloGrad" x1="0" y1="0" x2="300" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E599"/>
+      <stop offset="100%" stop-color="#FFDB6E"/>
+    </linearGradient>
+    <radialGradient id="sensorGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D26A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#121614" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="380" rx="16" fill="url(#bgGrad4)"/>
+
+  <!-- Satellite Imagery Simulation Frame -->
+  <g transform="translate(45, 35)">
+    <!-- Satellite Frame -->
+    <rect width="510" height="190" rx="12" fill="#18201B" stroke="#2B3D30" stroke-width="1.5"/>
+    <circle cx="255" cy="95" r="90" fill="url(#sensorGrad)"/>
+
+    <!-- Target grid / crosshairs -->
+    <path d="M255 15 V175 M35 95 H475" stroke="#3A5342" stroke-width="1" stroke-dasharray="4 4"/>
+    <circle cx="255" cy="95" r="45" stroke="#3A5342" stroke-width="1" fill="none"/>
+    <circle cx="255" cy="95" r="75" stroke="#3A5342" stroke-width="1" fill="none"/>
+
+    <!-- Multispectral Canopy Trees with YOLOv7 Bounding Boxes -->
+    <!-- Tree 1 Healthy -->
+    <g transform="translate(130, 45)">
+      <circle cx="25" cy="25" r="22" fill="#00A854" opacity="0.6"/>
+      <circle cx="25" cy="25" r="14" fill="#00D26A" opacity="0.8"/>
+      <rect x="0" y="0" width="50" height="50" rx="4" fill="none" stroke="#00E599" stroke-width="1.5"/>
+      <rect x="0" y="-14" width="60" height="13" rx="2" fill="#00E599"/>
+      <text x="30" y="-4" fill="#0A180E" font-family="'Poppins', sans-serif" font-size="8" font-weight="700" text-anchor="middle">Tree #104 ┬╖ 98%</text>
+    </g>
+
+    <!-- Tree 2 Needs Attention (Spectral Flag) -->
+    <g transform="translate(225, 70)">
+      <circle cx="25" cy="25" r="24" fill="#D49A00" opacity="0.5"/>
+      <circle cx="25" cy="25" r="15" fill="#FFC107" opacity="0.7"/>
+      <rect x="0" y="0" width="50" height="50" rx="4" fill="none" stroke="#FFDB6E" stroke-width="1.5"/>
+      <rect x="0" y="-14" width="72" height="13" rx="2" fill="#FFDB6E"/>
+      <text x="36" y="-4" fill="#1C1400" font-family="'Poppins', sans-serif" font-size="8" font-weight="700" text-anchor="middle">Spectral Stress ┬╖ 94%</text>
+    </g>
+
+    <!-- Tree 3 Healthy -->
+    <g transform="translate(330, 50)">
+      <circle cx="25" cy="25" r="20" fill="#00A854" opacity="0.6"/>
+      <circle cx="25" cy="25" r="12" fill="#00D26A" opacity="0.8"/>
+      <rect x="0" y="0" width="50" height="50" rx="4" fill="none" stroke="#00E599" stroke-width="1.5"/>
+      <rect x="0" y="-14" width="60" height="13" rx="2" fill="#00E599"/>
+      <text x="30" y="-4" fill="#0A180E" font-family="'Poppins', sans-serif" font-size="8" font-weight="700" text-anchor="middle">Tree #105 ┬╖ 96%</text>
+    </g>
+
+    <!-- Telemetry Badges top corners -->
+    <rect x="15" y="15" width="100" height="22" rx="6" fill="#111713" stroke="#2B3D30" stroke-width="1"/>
+    <text x="65" y="30" fill="#00E599" font-family="'Poppins', sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">93% mAP (3 Bands)</text>
+
+    <rect x="390" y="15" width="105" height="22" rx="6" fill="#111713" stroke="#2B3D30" stroke-width="1"/>
+    <text x="442" y="30" fill="#FFDB6E" font-family="'Poppins', sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">10,000+ Trees/Run</text>
+  </g>
+
+  <!-- Project Info Footer -->
+  <rect x="30" y="240" width="540" height="110" rx="12" fill="#1C1C21" stroke="#303038" stroke-width="1"/>
+  <text x="50" y="272" fill="#FFFFFF" font-family="'Poppins', sans-serif" font-size="17" font-weight="600">Tree Detection &amp; Health Monitoring System</text>
+  <text x="50" y="295" fill="#AAAAAA" font-family="'Poppins', sans-serif" font-size="12">YOLOv7 on multispectral satellite imagery ΓÇö 93% mAP, 10,000+ trees/run, cutting survey time 80%</text>
+
+  <!-- Stack Pills -->
+  <g transform="translate(50, 312)">
+    <rect x="0" y="0" width="75" height="24" rx="12" fill="#2C2C35"/>
+    <text x="37" y="16" fill="#00E599" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">YOLOv7</text>
+
+    <rect x="85" y="0" width="125" height="24" rx="12" fill="#2C2C35"/>
+    <text x="147" y="16" fill="#FFDB6E" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="500" text-anchor="middle">Satellite Imagery</text>
+
+    <rect x="220" y="0" width="95" height="24" rx="12" fill="#2C2C35"/>
+    <text x="267" y="16" fill="#E0E0E0" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="500" text-anchor="middle">Flask REST</text>
+
+    <rect x="325" y="0" width="105" height="24" rx="12" fill="#2C2C35"/>
+    <text x="377" y="16" fill="#E0E0E0" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="500" text-anchor="middle">Deep Learning</text>
+
+    <rect x="440" y="0" width="105" height="24" rx="12" fill="#2C2C35"/>
+    <text x="492" y="16" fill="#00E599" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">-80% Workload</text>
+  </g>
+</svg>
